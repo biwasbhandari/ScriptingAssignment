@@ -10,4 +10,4 @@ while (count < 20) {
   number++;
 }
 
-document.write("The sum of the first 20 even numbers is: " + sum);
+console.log("The sum of the first 20 even numbers is: " + sum);

@@ -1,0 +1,23 @@
+In JavaScript, events are actions or occurrences that happen in the web browser, such as clicking a button, pressing a key, or submitting a form. JavaScript allows you to respond to these events by defining event handlers, which are functions that execute when a specific event occurs.
+Events in JavaScript are as follows:
+Click Event:
+	button.addEventListener('click', function() {
+  // Code to execute on click
+});
+KeyDown event:
+	input.addEventListener('keydown', function(event) {
+  // Code to execute when key press
+});
+Submit Event:
+	form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  // Code to execute on form submission
+});
+Load Event:
+image.addEventListener('load', function() {
+  // Code to execute when image is loaded
+});
+Resize Event:
+window.addEventListener('resize', function() {
+  // Code to execute when window is resized
+});

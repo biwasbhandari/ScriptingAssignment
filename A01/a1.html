@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1</title>
+  </head>
+  <body>
+    <script>
+      function odoreven(num) {
+        if (num % 2 === 0) {
+          console.log(`${num} is an even number.`);
+        } else {
+          console.log(`${num} is an odd number.`);
+        }
+      }
+
+      const input = prompt("Enter a number: ");
+      const number = Number(input);
+
+      if (!isNaN(number)) {
+        odoreven(number);
+      } else {
+        console.log("Invalid input!@!!! Please enter number.");
+      }
+    </script>
+  </body>
+</html>

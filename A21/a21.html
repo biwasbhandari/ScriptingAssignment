@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btnGetData").click(function () {
+          $.ajax({
+            url: "a21.php", // PHP file to handle the request
+            type: "GET",
+            dataType: "json",
+            success: function (response) {
+              // Display the fetched data on the webpage
+              if (response.length > 0) {
+                var html = "<ul>";
+                $.each(response, function (index, item) {
+                  html += "<li>" + item.name + " - $" + item.price + "</li>";
+                });
+                html += "</ul>";
+                $("#dataContainer").html(html);
+              } else {
+                $("#dataContainer").html("No data found");
+              }
+            },
+          });
+        });
+      });
+    </script>
+  </head>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Visibility Toggle</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Function to insert an image
+        $("#btnInsertImage").click(function () {
+          // Insert image into the imageContainer div
+          $("#imageContainer").html(
+            '<img src="https://via.placeholder.com/150" alt="Placeholder Image">'
+          );
+        });
+
+        // Function to hide the image
+        $("#btnHideImage").click(function () {
+          $("#imageContainer img").hide();
+        });
+
+        // Function to unhide the image
+        $("#btnUnhideImage").click(function () {
+          $("#imageContainer img").show();
+        });
+
+        // Function to toggle the visibility of the image
+        $("#btnToggleImage").click(function () {
+          $("#imageContainer img").toggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="btnInsertImage">Insert Image</button>
+    <button id="btnHideImage">Hide Image</button>
+    <button id="btnUnhideImage">Unhide Image</button>
+    <button id="btnToggleImage">Toggle Image Visibility</button>
+    <div id="imageContainer"></div>
+  </body>
+</html>

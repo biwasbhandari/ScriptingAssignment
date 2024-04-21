@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Example removeChild</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      <p>This paragraph will be removed.</p>
+    </div>
+    <script>
+      var parent = document.getElementById("myDiv");
+      var child = parent.getElementsByTagName("p")[0];
+      parent.removeChild(child);
+    </script>
+  </body>
+</html>
+
+\<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Example getElementsByTagName</title>
+  </head>
+  <body>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+
+    <script>
+      var listItems = document.getElementsByTagName("li");
+      for (var i = 0; i < listItems.length; i++) {
+        console.log(listItems[i].innerHTML); // Output: Item 1, Item 2
+      }
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Example getElementsByClassName</title>
+  </head>
+  <body>
+    <div class="myClass">Element 1</div>
+    <div class="myClass">Element 2</div>
+
+    <script>
+      var elements = document.getElementsByClassName("myClass");
+      for (var i = 0; i < elements.length; i++) {
+        console.log(elements[i].innerHTML); // Output: Element 1, Element 2
+      }
+    </script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Example getElementById</title>
+  </head>
+  <body>
+    <div id="myDiv">This is a div element.</div>
+
+    <script>
+      var element = document.getElementById("myDiv");
+      console.log(element.innerHTML); // Output: This is a div element.
+    </script>
+  </body>
+</html>
